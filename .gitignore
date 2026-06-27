@@ -1,0 +1,30 @@
+# python
+__pycache__/
+*.pyc
+backend/.venv/
+.venv/
+
+# node deps (frontend/dist IS committed so graders without node can run via run.sh)
+node_modules/
+frontend/tsconfig.tsbuildinfo
+
+# latex intermediate (slides.pdf IS committed as a deliverable)
+*.xdv
+
+# latex build artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# os / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/

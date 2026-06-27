@@ -1,0 +1,12 @@
+# 一键运行: docker compose up --build
+# 需在宿主环境提供 ANTHROPIC_API_KEY(及可选 BASE_URL / MODEL)。
+services:
+  factcheck:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL:-https://api.anthropic.com}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-opus-4-8}
+    restart: unless-stopped
